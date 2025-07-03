@@ -11,8 +11,11 @@ This will change automatically based on your system settings. So if your system 
 3. [Enable Custom CSS & Paste custom.css](https://kagi.com/settings/custom_css)
 4. Save changes and profit?
 
-# Buggy?
-Will probably be because I'm useless at this.
+# Bugs
+- A border with a drop shadow shows up across the screen if you unfocus the search field 😭
+- Can't get the mini toggle back next to "all" and "News 360" because I'm screwing around with the toggle switches for the side panel
+- A white square shows up next to the X in the search field on a result page, only when it's in focus
+- 
 
 # Screenshot
 Light mode looks like this

@@ -29,6 +29,13 @@
   }
 }
 
+a:hover,
+button:hover,
+label:hover,
+span:hover {
+  color: #549fec!important;
+}
+
 /* Base */
 body {
   font-family: Arial, sans-serif !important;
@@ -68,7 +75,7 @@ header, .app-header, .top-bar, .spt {
   );
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
+  overflow: fixed;
 }
 
 header::before, .app-header::before {
@@ -122,9 +129,17 @@ header::before, .app-header::before {
 .logo, .doggo_sit_a {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
-._0_k_ui_dropdown_data_list, ._0_more_search_box {
+._0_k_ui_dropdown_data_list, ._0_more_search_box, .k_ui_dropdown_data_list {
   background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
   /* filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); */
+}
+.auto_suggestions {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+.auto_suggestions_footer {
+  background-color: rgb(255, 255, 255) !important;
 }
 .advanced-search-modal {
   background-color: rgba(255, 255, 255, 0.6);
@@ -135,9 +150,6 @@ header::before, .app-header::before {
   background-color: rgba(255, 255, 255, 0.0) !IMPORTANT;
 }
 .search-form:focus {
-  /* I KNOW THIS ONE IS BROKEN, I DON'T KNOW HOW TO FIX IT! */
-  /* For some reason whenever you unfocus the search field */
-  /* a shadow and line show up at the top of the screen... */
   box-shadow: none !important;
   filter: none !important;
   backdrop-filter: none !important;
