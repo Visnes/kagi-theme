@@ -339,7 +339,7 @@ button#searchFormSubmit {
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
-  body, svg {
+  body {
     color: var(--text);
   }
   .spt {
@@ -391,7 +391,6 @@ button#searchFormSubmit {
     padding-top: 8vh; /* adaptive spacing */
   }
 
-  /* Make buttons smaller and fit mobile screens */
   :root {
     --btn-scale: 0.5;
   }
@@ -402,19 +401,16 @@ button#searchFormSubmit {
     min-width: 4em;
   }
 
-  /* Slim down header on mobile */
   header, .app-header, .top-bar, .spt {
     padding: 0.5em;
     backdrop-filter: blur(6px);
     z-index: 99;
   }
 
-  /* Fix pinstripe on smaller width */
   .body-content {
     background-size: 4px 4px;
   }
 
-  /* Ensure suggestion box fits mobile width */
   .auto_suggestions {
     max-width: 100vw;
     left: 0;
@@ -430,5 +426,13 @@ button#searchFormSubmit {
   .doggo_sit_a {
     width: 100%;
     height: auto;
+  }
+  .s-f-w.--active {
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    ) !important;
   }
 }
