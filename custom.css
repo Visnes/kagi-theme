@@ -10,6 +10,7 @@
   --pinstripe2-light: rgba(240, 240, 240, 0.7);
   --pinstripe1-dark: rgba(34, 34, 34, 0.6);
   --pinstripe2-dark: rgba(44, 44, 44, 0.6);
+  --btn-scale: 0.6;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -133,16 +134,27 @@ header::before, .app-header::before {
 .advanced-search-modal-backdrop::before {
   background-color: rgba(255, 255, 255, 0.0) !IMPORTANT;
 }
+.search-form:focus {
+  /* I KNOW THIS ONE IS BROKEN, I DON'T KNOW HOW TO FIX IT! */
+  /* For some reason whenever you unfocus the search field */
+  /* a shadow and line show up at the top of the screen... */
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
 
 /* Button */
 /* Coded by Andrew Millen https://codepen.io/andrewmillen/ */
 /* Code located at https://codepen.io/andrewmillen/pen/RwqBMrO */
-btn {
+
+.btn {
+  font-size: calc(1.5rem * var(--btn-scale));
+  height: calc(1.5em * var(--btn-scale));
+  padding: 0 calc(1.5em * var(--btn-scale));
   grid-row: 1;
-  font-size: 3rem; // change me to adjust the scale of the btns
   font-family: "myriad-pro", system-ui;
-  height: 1.75em;
-  padding: 0 2em;
+  font-weight: 500;
   min-width: 6em;
   border-radius: 1000px;
   position: relative;
@@ -161,7 +173,8 @@ btn {
 }
 
 .btn.--primary {
-  background: linear-gradient(rgba(0, 65, 184, 0.625), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.625));
+  color: #000;
+  background: linear-gradient(rgba(0, 65, 184, 0.325), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.325));
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
               0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
               inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
@@ -195,28 +208,28 @@ btn {
 }
 
 // top shine
-btn:before {
+.btn:before {
   @include pseudo-positioning;
   background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
   top: 5%;
-  filter: blur(1px);
+  /* filter: blur(1px); */
   z-index: 2;
 }
 
 // bottom glow
-btn:after {
+.btn:after {
   @include pseudo-positioning;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgb(255, 255, 255, 0.5));
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
   bottom: 10%;
-  filter: blur(3px);
+  /* filter: blur(3px); */
 }
 
 // text
-btn span {
+.btn span {
   position: relative;
   top: -1px;
   z-index: 1;  
@@ -233,12 +246,16 @@ btn span {
   text-shadow: 0 0.25em 0.2em rgba(0, 0, 0, 0.1);
 }
 
-/* Ignore these buttons */
+/* Ignore these elements */
 button#searchFormSubmit {
   all: unset;
 }
+.k_ui_toggle_switch._0_lensToggler.--mini {
+  all: unset !important;
+}
 
 /* Toggle switches */
+/* Toggle switch when ON */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar {
   position: relative;
   background: linear-gradient(
@@ -255,6 +272,7 @@ button#searchFormSubmit {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Top shine */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::before {
   content: '';
   position: absolute;
@@ -270,6 +288,7 @@ button#searchFormSubmit {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Bottom glow */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::after {
   content: '';
   position: absolute;
@@ -284,6 +303,7 @@ button#searchFormSubmit {
   z-index: 1;
 }
 
+/* Remove default border on ::after */
 .k_ui_toggle_switch_bar::after {
   border: none !important;
 }
