@@ -92,7 +92,7 @@ header::before, .app-header::before {
      box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 
-  header::before, .app-header::before {
+  .app-header::before {
     background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
     opacity: 0.3;
   }

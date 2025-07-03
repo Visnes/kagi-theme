@@ -26,7 +26,7 @@ Light mode looks like this
 Dark mode looks like this
 ![dark](images/dark.png)
 ![dark-result](images/dark-result.png)
-![light-advanced-search](images/light-advanced-search.png)
+![dark-advanced-search](images/dark-advanced-search.png)
 
 # Credits
 - The [button CSS](https://codepen.io/andrewmillen/pen/RwqBMrO) is made by [Andrew Millen](https://codepen.io/andrewmillen/)
