@@ -121,3 +121,119 @@ header::before, .app-header::before {
 .logo, .doggo_sit_a {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
+._0_k_ui_dropdown_data_list, ._0_more_search_box {
+  background-color: rgba(255, 255, 255, 0.6);
+  /* filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); */
+}
+.advanced-search-modal {
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.advanced-search-modal-backdrop::before {
+  background-color: rgba(255, 255, 255, 0.0) !IMPORTANT;
+}
+
+/* Button */
+/* Coded by Andrew Millen https://codepen.io/andrewmillen/ */
+/* Code located at https://codepen.io/andrewmillen/pen/RwqBMrO */
+btn {
+  grid-row: 1;
+  font-size: 3rem; // change me to adjust the scale of the btns
+  font-family: "myriad-pro", system-ui;
+  height: 1.75em;
+  padding: 0 2em;
+  min-width: 6em;
+  border-radius: 1000px;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  color: #000;
+  outline: none;
+}
+
+@mixin pseudo-positioning {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 33%;
+}
+
+.btn.--primary {
+  background: linear-gradient(rgba(0, 65, 184, 0.625), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.625));
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
+              0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
+              inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+              inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
+}
+
+.btn.--primary:focus,
+.btn.--primary:active {
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
+              0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
+              inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+              inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
+              0 0 0.5em rgba(52, 106, 227, 0.5);
+}
+
+.btn {
+  background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
+              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
+              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+              inset 0 0.375em 0.5em 0.25em #BBBBBB;
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
+              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
+              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+              inset 0 0.375em 0.5em 0.25em #BBBBBB,
+              0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+
+// top shine
+btn:before {
+  @include pseudo-positioning;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  width: calc(100% - 0.875em);
+  border-radius: 2em 2em 0.5em 0.5em;
+  top: 5%;
+  filter: blur(1px);
+  z-index: 2;
+}
+
+// bottom glow
+btn:after {
+  @include pseudo-positioning;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgb(255, 255, 255, 0.5));
+  width: calc(100% - 1.25em);
+  border-radius: 0.75em;
+  bottom: 10%;
+  filter: blur(3px);
+}
+
+// text
+btn span {
+  position: relative;
+  top: -1px;
+  z-index: 1;  
+  letter-spacing: 0.0375em;
+  -webkit-text-stroke-width: 0.025em;
+  -webkit-text-stroke-color: #000000;
+}
+
+.btn.--primary span {
+  text-shadow: 0 0.25em 0.2em rgba(30, 77, 161, 0.5);
+}
+
+.btn span {
+  text-shadow: 0 0.25em 0.2em rgba(0, 0, 0, 0.1);
+}
+
+/* Ignore these buttons */
+button#searchFormSubmit {
+  all: unset;
+}
