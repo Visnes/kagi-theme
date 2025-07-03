@@ -101,7 +101,7 @@ header::before, .app-header::before {
 }
 
 /* Search suggestions */
-.auto_suggestions--visible {
+.auto_suggestions --visble {
   position: absolute;
   z-index: 10000 !important;
   top: 100%;
@@ -114,6 +114,7 @@ header::before, .app-header::before {
 /* Page content spacing */
 .app-box-center {
   padding-top: 180px;
+  z-index: 1;
 }
 
 /* Small additions */
