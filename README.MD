@@ -18,21 +18,27 @@ This will change automatically based on your system settings. So if your system 
 - 
 
 # Screenshot
-## **Light mode on desktop**
-![light](images/light.png)
-![light-result](images/light-result.png)
-![light-advanced-search](images/light-advanced-search.png)
+## Light mode on desktop
 
-## **Dark mode on desktop**
-![dark](images/dark.png)
-![dark-result](images/dark-result.png)
-![dark-advanced-search](images/dark-advanced-search.png)
+| ![light](images/light.png) | ![light-result](images/light-result.png) | ![light-advanced-search](images/light-advanced-search.png) |
+|----------------------------|-------------------------------------------|-------------------------------------------------------------|
+
+
+## Dark mode on desktop
+
+| ![dark](images/dark.png) | ![dark-result](images/dark-result.png) | ![dark-advanced-search](images/dark-advanced-search.png) |
+|--------------------------|-----------------------------------------|-----------------------------------------------------------|
+
 
 ## **Light mode on mobile**
-![light](images/light-mobile.png) ![light-result](images/light-mobile-result.png) ![light-advanced-search](images/light-mobile-advanced-search.png)
+![light](images/light-mobile.png)
+![light-result](images/light-mobile-result.png)
+![light-advanced-search](images/light-mobile-advanced-search.png)
 
 ## **Dark mode on mobile**
-![dark](images/dark-mobile.png) ![dark-result](images/dark-mobile-result.png) ![dark-advanced-search](images/dark-mobile-advanced-search.png)
+![dark](images/dark-mobile.png)
+![dark-result](images/dark-mobile-result.png)
+![dark-advanced-search](images/dark-mobile-advanced-search.png)
 
 # Credits
 - The [button CSS](https://codepen.io/andrewmillen/pen/RwqBMrO) is made by [Andrew Millen](https://codepen.io/andrewmillen/)
