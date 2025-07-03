@@ -21,10 +21,12 @@ This will change automatically based on your system settings. So if your system 
 Light mode looks like this
 ![light](images/light.png)
 ![light-result](images/light-result.png)
+![light-advanced-search](images/light-advanced-search.png)
 
 Dark mode looks like this
 ![dark](images/dark.png)
 ![dark-result](images/dark-result.png)
+![light-advanced-search](images/light-advanced-search.png)
 
 # Credits
 - The [button CSS](https://codepen.io/andrewmillen/pen/RwqBMrO) is made by [Andrew Millen](https://codepen.io/andrewmillen/)
