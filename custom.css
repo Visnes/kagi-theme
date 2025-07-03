@@ -1,4 +1,7 @@
 :root {
+  --text: var(--text-light);
+  --text-light: #000;
+  --text-dark: #fff;
   --bg-dark: #161616;
   --bg-light: #f0f0f0;
   --bg: #f8f8f8;
@@ -16,6 +19,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: var(--bg-dark);
+    --text: var(--text-dark);
     --pinstripe1: var(--pinstripe1-dark);
     --pinstripe2: var(--pinstripe2-dark);
   }
@@ -24,6 +28,7 @@
 @media (prefers-color-scheme: light) {
   :root {
     --bg: var(--bg-light);
+    --text: var(--text-light);
     --pinstripe1: var(--pinstripe1-light);
     --pinstripe2: var(--pinstripe2-light);
   }
@@ -122,8 +127,6 @@ header::before, .app-header::before {
   padding-top: 180px;
   z-index: 1;
 }
-
-/* Small additions */
 
 /* Shadow on logo and doggo */
 .logo, .doggo_sit_a {
@@ -329,4 +332,94 @@ button#searchFormSubmit {
 /* Remove default border on ::after */
 .k_ui_toggle_switch_bar::after {
   border: none !important;
+}
+
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .spt {
+    display: none;
+  }
+  .content-area {
+    background: var(--bg) !important;
+  }
+  .a-w {
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    );
+  }
+  .m-h {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 1em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    );
+    transition: transform 0.3s ease;
+  }
+  .top-nav {
+    padding-top: 150px !important;
+    z-index: 1;
+  }
+  .quick-settings {
+    background-color: rgba(var(--bg), 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  .quick-settings --open {
+    z-index: 999 !important;
+  }
+
+  .app-box-center {
+    padding-top: 8vh;
+  }
+
+  :root {
+    --btn-scale: 0.5;
+  }
+
+  .btn {
+    font-size: calc(1.5rem * var(--btn-scale));
+    padding: 0 calc(1rem * var(--btn-scale));
+    min-width: 4em;
+  }
+
+
+  header, .app-header, .top-bar, .spt {
+    padding: 0.5em;
+    backdrop-filter: blur(6px);
+    z-index: 99;
+  }
+
+
+  .body-content {
+    background-size: 4px 4px;
+  }
+
+  .auto_suggestions {
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+  }
+  .m-app-logo {
+    color: var(--text) !important;
+  }
+  .logo {
+    display: none !important;
+    filter: none !important;
+  }
+  .doggo_sit_a {
+    width: 100%;
+    height: auto;
+  }
 }
