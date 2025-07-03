@@ -1,5 +1,5 @@
-# An OS X inspired pinstripe theme for Kagi!
-Just copy the CSS from custom.css into your kagi user at [Settings → Appearance](https://kagi.com/settings/appearance). 
+# An OS X inspired aqua theme for Kagi!
+Tried making something that's inspired by old school OS X Aqua.
 
 ## Auto Light & Dark mode
 This will change automatically based on your system settings. So if your system is set to light, it will show the light version.
@@ -15,7 +15,6 @@ This will change automatically based on your system settings. So if your system 
 Will probably be because I'm useless at this.
 
 # Screenshot
-
 Light mode looks like this
 ![light](images/light.png)
 ![light-result](images/light-result.png)
@@ -23,3 +22,6 @@ Light mode looks like this
 Dark mode looks like this
 ![dark](images/dark.png)
 ![dark-result](images/dark-result.png)
+
+# Credits
+- The [button CSS](https://codepen.io/andrewmillen/pen/RwqBMrO) is made by [Andrew Millen](https://codepen.io/andrewmillen/)
