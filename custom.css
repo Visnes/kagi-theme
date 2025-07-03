@@ -1,0 +1,127 @@
+:root {
+  --my-bg: #1c1c1c;
+  --my-bg-dark: #161616;
+  --my-bg-light: #2c2c2c;
+  --my-main-color: #199146;
+  --my-main-color-dark: #295e3d;
+  --my-main-color-recent: rgba(73, 104, 85, 0.8);
+  --my-main-color-old: rgba(73, 104, 85, 0.25);
+}
+
+.spt {
+  display: none;
+  visibility: hidden;
+}
+
+/* Dynamic theme vars */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: var(--my-bg);
+    --bg-dark: var(--my-bg-dark);
+    --bg-light: var(--my-bg-light);
+    --main: var(--my-main-color);
+    --main-dark: var(--my-main-color-dark);
+    --main-recent: var(--my-main-color-recent);
+    --main-old: var(--my-main-color-old);
+    --pinstripe1: rgba(34, 34, 34, 0.6);
+
+    --pinstripe2: rgba(44, 44, 44, 0.6);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8f8f8;
+    --bg-dark: #ffffff;
+    --bg-light: #f0f0f0;
+    --main: #199146;
+    --main-dark: #295e3d;
+    --main-recent: rgba(73, 104, 85, 0.8);
+    --main-old: rgba(73, 104, 85, 0.25);
+    --pinstripe1: rgba(255, 255, 255, 0.7);
+    --pinstripe2: rgba(240, 240, 240, 0.7);
+  }
+}
+
+/* Base */
+body {
+  font-family: Arial, sans-serif !important;
+  background-color: var(--bg);
+}
+
+/* Homepage only */
+.body-content {
+    background-image: repeating-linear-gradient(
+        var(--pinstripe1) 0%,
+        var(--pinstripe1) 2px,
+        var(--pinstripe2) 2px,
+        var(--pinstripe2) 4px
+    );
+}
+.copyright::after {
+  content: "© Visnes. Themenize the Kagi.";
+}
+
+/* Header */
+header, .app-header, .top-bar, .spt {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  padding: 1em;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+    background-image: repeating-linear-gradient(
+        var(--pinstripe1) 0%,
+        var(--pinstripe1) 2px,
+        var(--pinstripe2) 2px,
+        var(--pinstripe2) 4px
+    );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+header::before, .app-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@media (prefers-color-scheme: light) {
+  header, .app-header, .top-bar, .spt {
+    background-image: repeating-linear-gradient(
+        var(--pinstripe1) 0%,
+        var(--pinstripe1) 2px,
+        var(--pinstripe2) 2px,
+        var(--pinstripe2) 4px
+    );
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  }
+
+  header::before, .app-header::before {
+    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  }
+}
+
+/* Navigation */
+.app-nav {
+  border-bottom: 0px;
+}
+
+/* Search suggestions */
+.auto_suggestions {
+  z-index: 10000 !IMPORTANT;
+}
+
+/* Page content spacing */
+.app-box-center {
+  padding-top: 180px;
+}
+
