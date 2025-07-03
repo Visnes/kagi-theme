@@ -11,6 +11,8 @@ Will probably be because I'm useless at this.
 
 Light mode looks like this
 ![light](images/light.png)
+![light-result](images/light-result.png)
 
 Dark mode looks like this
 ![dark](images/dark.png)
+![dark-result](images/dark-result.png)
