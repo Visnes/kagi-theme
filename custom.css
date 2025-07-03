@@ -237,3 +237,53 @@ btn span {
 button#searchFormSubmit {
   all: unset;
 }
+
+/* Toggle switches */
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar {
+  position: relative;
+  background: linear-gradient(
+    rgba(0, 65, 184, 0.625), 
+    rgba(45, 115, 199, 0.625), 
+    rgba(33, 160, 196, 0.625)
+  );
+  box-shadow:
+    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  height: 33%;
+  width: calc(100% - 0.875em);
+  border-radius: 2em 2em 0.5em 0.5em;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  filter: blur(1px);
+  z-index: 2;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  height: 33%;
+  width: calc(100% - 1.25em);
+  border-radius: 0.75em;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  filter: blur(3px);
+  z-index: 1;
+}
+
+.k_ui_toggle_switch_bar::after {
+  border: none !important;
+}
