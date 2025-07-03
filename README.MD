@@ -24,9 +24,7 @@ This will change automatically based on your system settings. So if your system 
 ![light-advanced-search](images/light-advanced-search.png)
 
 ## **Dark mode on desktop**
-![dark](images/dark.png)
-![dark-result](images/dark-result.png)
-![dark-advanced-search](images/dark-advanced-search.png)
+![dark](images/dark.png) ![dark-result](images/dark-result.png) ![dark-advanced-search](images/dark-advanced-search.png)
 
 ## **Light mode on mobile**
 ![light](images/light-mobile.png)
