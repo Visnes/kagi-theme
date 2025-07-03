@@ -107,6 +107,11 @@ header::before, .app-header::before {
 
   header::before, .app-header::before {
     background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    opacity: 0.3;
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    content: "";
   }
 }
 
@@ -114,10 +119,14 @@ header::before, .app-header::before {
 .app-nav {
   border-bottom: 0px;
 }
+.landing_cat_buttons {
+  border-bottom: 0px;
+}
 
 /* Search suggestions */
-.auto_suggestions {
+.auto_suggestions --visible {
   z-index: 10000 !IMPORTANT;
+  position: relative; 
 }
 
 /* Page content spacing */
