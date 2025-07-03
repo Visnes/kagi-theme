@@ -73,9 +73,7 @@ header, .app-header, .top-bar, .spt {
     var(--pinstripe2) 2px,
     var(--pinstripe2) 4px
   );
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
-  overflow: fixed;
+
 }
 
 header::before, .app-header::before {
@@ -89,9 +87,9 @@ header::before, .app-header::before {
 }
 
 @media (prefers-color-scheme: light) {
-  header, .app-header, .top-bar, .spt {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  .app-header {
+     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 
   header::before, .app-header::before {
