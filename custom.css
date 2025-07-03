@@ -6,10 +6,6 @@
   --bg-dark: rgb(22, 22, 22);
   --bg-light: rgb(240, 240, 240);
   --bg: rgb(248, 248, 248);
-  --main: rgb(25, 145, 70);
-  --main-dark: rgb(41, 94, 61);
-  --main-recent: rgba(73, 104, 85, 0.8);
-  --main-old: rgba(73, 104, 85, 0.25);
   --pinstripe1-light: rgba(255, 255, 255, 0.7);
   --pinstripe2-light: rgba(240, 240, 240, 0.7);
   --pinstripe1-dark: rgba(34, 34, 34, 0.6);
@@ -345,8 +341,8 @@ button#searchFormSubmit {
   .spt {
     display: none;
   }
-  .content-area {
-    background: var(--bg) !important;
+  .content-area, .mob {
+   background: var(--bg) !important;
   }
   .a-w {
     background-image: repeating-linear-gradient(
@@ -355,6 +351,9 @@ button#searchFormSubmit {
       var(--pinstripe2) 2px,
       var(--pinstripe2) 4px
     );
+  }
+  ._0_filters-panel, .serp-nav {
+    background: none !important;
   }
   .m-h {
     position: fixed;
@@ -427,6 +426,9 @@ button#searchFormSubmit {
     width: 100%;
     height: auto;
   }
+  .sri-group, .search-result {
+    border-bottom: 0px !important;
+  }
   .s-f-w.--active {
     background-image: repeating-linear-gradient(
       var(--pinstripe1) 0%,
@@ -434,5 +436,12 @@ button#searchFormSubmit {
       var(--pinstripe2) 2px,
       var(--pinstripe2) 4px
     ) !important;
+  }
+  .main-footer::after {
+    content: "© Kagi. Humanize the Web.\A© Visnes. Themenize the Kagi.";
+    font-size: calc(1.2rem * var(--btn-scale));
+    display: block;
+    text-align: center;
+    white-space: pre;
   }
 }
