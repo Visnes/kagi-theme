@@ -1,5 +1,6 @@
 :root {
   --primary: var(--text);
+  --blue: rgb(14, 122, 254);
   --text: var(--text-light);
   --text-light: rgb(0, 0, 0);
   --text-dark: rgb(255, 255, 255);
@@ -31,11 +32,20 @@
   }
 }
 
+hr {
+  display: none;
+}
+
+
 a:hover,
 button:hover,
 label:hover,
 span:hover {
-  color: #549fec!important;
+  color: var(--blue) !important;
+}
+
+a.nav-item-link.--active {
+  color: var(--blue) !important;
 }
 
 /* Base */
@@ -131,6 +141,7 @@ header::before, .app-header::before {
 .logo, .doggo_sit_a {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
+
 
 /* Transparancy, blur and shadow on lists */
 ._0_k_ui_dropdown_data_list, ._0_more_search_box, .k_ui_dropdown_data_list {
@@ -271,13 +282,24 @@ header::before, .app-header::before {
   text-shadow: 0 0.25em 0.2em rgba(0, 0, 0, 0.1);
 }
 
+/* Hover button */
+.btn.--primary:hover {
+  color: rgb(255, 255, 255) !important;
+  box-shadow:
+    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
+    0 0 1em rgba(84, 159, 236, 0.7); /* blue glow */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+
 /* Ignore these elements */
 button#searchFormSubmit {
   all: unset;
 }
-.k_ui_toggle_switch._0_lensToggler.--mini {
-  all: unset !important;
-}
+
 
 /* Toggle switches */
 /* Toggle switch when ON */
@@ -332,6 +354,95 @@ button#searchFormSubmit {
 .k_ui_toggle_switch_bar::after {
   border: none !important;
 }
+
+
+
+
+/* Toggle switches */
+/* Toggle switch when ON */
+.k_ui_toggle_switch input:checked ~ ._0_lensToggler {
+  position: relative;
+    background: linear-gradient(
+    rgba(0, 65, 184, 0.625), 
+    rgba(45, 115, 199, 0.625), 
+    rgba(33, 160, 196, 0.625)
+  ) !important;
+  
+  box-shadow:
+    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75) !important;
+  border: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Top shine */
+.k_ui_toggle_switch input:checked ~ ._0_lensToggler::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  transform: translateX(-50%);
+  height: 33%;
+  width: calc(100% - 0.875em);
+  border-radius: 2em 2em 0.5em 0.5em;
+  background: #fff !important;
+  filter: blur(1px);
+  z-index: 2;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Bottom glow */
+.k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar::after {
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)) !important;
+  filter: blur(3px);
+  z-index: 1;
+}
+.k_ui_toggle_switch input:checked~.k_ui_toggle_switch_bar,
+.k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar {
+  background: linear-gradient(
+    rgba(0, 65, 184, 0.625), 
+    rgba(45, 115, 199, 0.625), 
+    rgba(33, 160, 196, 0.625)
+  ) !important;
+}
+/* Remove default border on ::after */
+._0_lensToggler::after {
+  border: none !important;
+}
+/* Hover toggle */
+.k_ui_toggle_switch input:checked:hover ~ .k_ui_toggle_switch_bar,
+.k_ui_toggle_switch input:checked:hover ~ ._0_lensToggler {
+  box-shadow:
+    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
+    0 0 1em rgba(84, 159, 236, 0.7); /* blue glow */
+  transition: box-shadow 0.2s ease-in-out;
+}
+.k_ui_toggle_switch input:not(:checked):hover ~ .k_ui_toggle_switch_bar,
+.k_ui_toggle_switch input:not(:checked):hover ~ ._0_lensToggler {
+  box-shadow:
+    0 0.375em 0.5em rgba(0, 0, 0, 0.2),
+    0 0 1em rgba(84, 159, 236, 0.4); /* muted blue glow */
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+
+
+
+
+
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
