@@ -1,12 +1,13 @@
 :root {
+  --primary: var(--text);
   --text: var(--text-light);
-  --text-light: #000;
-  --text-dark: #fff;
-  --bg-dark: #161616;
-  --bg-light: #f0f0f0;
-  --bg: #f8f8f8;
-  --main: #199146;
-  --main-dark: #295e3d;
+  --text-light: rgb(0, 0, 0);
+  --text-dark: rgb(255, 255, 255);
+  --bg-dark: rgb(22, 22, 22);
+  --bg-light: rgb(240, 240, 240);
+  --bg: rgb(248, 248, 248);
+  --main: rgb(25, 145, 70);
+  --main-dark: rgb(41, 94, 61);
   --main-recent: rgba(73, 104, 85, 0.8);
   --main-old: rgba(73, 104, 85, 0.25);
   --pinstripe1-light: rgba(255, 255, 255, 0.7);
@@ -127,6 +128,8 @@ header::before, .app-header::before {
   padding-top: 180px;
   z-index: 1;
 }
+
+/* Small additions */
 
 /* Shadow on logo and doggo */
 .logo, .doggo_sit_a {
@@ -334,9 +337,11 @@ button#searchFormSubmit {
   border: none !important;
 }
 
-
 /* Mobile adjustments */
 @media (max-width: 600px) {
+  body, svg {
+    color: var(--text);
+  }
   .spt {
     display: none;
   }
@@ -372,18 +377,21 @@ button#searchFormSubmit {
     padding-top: 150px !important;
     z-index: 1;
   }
-  .quick-settings {
-    background-color: rgba(var(--bg), 0.9) !important;
+  .quick-settings, .quick-settings-footer {
+    background-color: rgba(var(--bg), 0.2) !important;
     backdrop-filter: blur(10px) !important;
   }
   .quick-settings --open {
     z-index: 999 !important;
   }
-
+  .d, .description,  {
+    color: var(--text) !important;
+  }
   .app-box-center {
-    padding-top: 8vh;
+    padding-top: 8vh; /* adaptive spacing */
   }
 
+  /* Make buttons smaller and fit mobile screens */
   :root {
     --btn-scale: 0.5;
   }
@@ -394,18 +402,19 @@ button#searchFormSubmit {
     min-width: 4em;
   }
 
-
+  /* Slim down header on mobile */
   header, .app-header, .top-bar, .spt {
     padding: 0.5em;
     backdrop-filter: blur(6px);
     z-index: 99;
   }
 
-
+  /* Fix pinstripe on smaller width */
   .body-content {
     background-size: 4px 4px;
   }
 
+  /* Ensure suggestion box fits mobile width */
   .auto_suggestions {
     max-width: 100vw;
     left: 0;
