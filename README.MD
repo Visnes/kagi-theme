@@ -15,7 +15,11 @@ This will change automatically based on your system settings. So if your system 
 - ~~A border with a drop shadow shows up across the screen if you unfocus the search field 😭~~
 - Can't get the mini toggle back next to "all" and "News 360" because I'm screwing around with the toggle switches for the side panel
 - ~~A white square shows up next to the X in the search field on a result page, only when it's in focus~~
-- 
+
+# Working on
+- The bugs above
+- Fixing it so you can actually choose the theme from Kagi, and not use "Default"
+- Clean up things. This is a mess...
 
 # Screenshot
 ## Light mode on desktop
