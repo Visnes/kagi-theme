@@ -124,14 +124,19 @@ header::before, .app-header::before {
 }
 
 /* Small additions */
+
+/* Shadow on logo and doggo */
 .logo, .doggo_sit_a {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
+
+/* Transparancy, blur and shadow on lists */
 ._0_k_ui_dropdown_data_list, ._0_more_search_box, .k_ui_dropdown_data_list {
   background-color: rgba(var(--bg), 0.6);
   backdrop-filter: blur(10px);
   /* filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); */
 }
+
 .auto_suggestions {
   background-color: rgba(var(--bg), 0.6);
   backdrop-filter: blur(5px);
@@ -146,6 +151,14 @@ header::before, .app-header::before {
 }
 .advanced-search-modal-backdrop::before {
   background-color: rgba(255, 255, 255, 0.0) !IMPORTANT;
+}
+.as-footer {
+  background-image: repeating-linear-gradient(
+    var(--pinstripe1) 0%,
+    var(--pinstripe1) 2px,
+    var(--pinstripe2) 2px,
+    var(--pinstripe2) 4px
+  ) !important;
 }
 .search-form:focus {
   box-shadow: none !important;
