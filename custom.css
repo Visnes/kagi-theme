@@ -6,7 +6,7 @@
   --text-dark: rgb(255, 255, 255);
   --bg-dark: rgb(22, 22, 22);
   --bg-light: rgb(240, 240, 240);
-  --bg: rgb(248, 248, 248);
+  --bg: 248, 248, 248;
   --pinstripe1-light: rgba(255, 255, 255, 0.7);
   --pinstripe2-light: rgba(240, 240, 240, 0.7);
   --pinstripe1-dark: rgba(34, 34, 34, 0.6);
@@ -35,7 +35,6 @@
 hr {
   display: none;
 }
-
 
 a:hover,
 button:hover,
@@ -69,7 +68,10 @@ body {
 }
 
 /* Header */
-header, .app-header, .top-bar, .spt {
+header,
+.app-header,
+.top-bar,
+.spt {
   position: fixed;
   top: 0;
   left: 0;
@@ -84,14 +86,18 @@ header, .app-header, .top-bar, .spt {
     var(--pinstripe2) 2px,
     var(--pinstripe2) 4px
   );
-
 }
 
-header::before, .app-header::before {
+header::before,
+.app-header::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
@@ -99,12 +105,16 @@ header::before, .app-header::before {
 
 @media (prefers-color-scheme: light) {
   .app-header {
-     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 
   .app-header::before {
-    background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
     opacity: 0.3;
   }
 }
@@ -124,8 +134,12 @@ header::before, .app-header::before {
   top: 100%;
   left: 0;
   right: 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.15), transparent);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
 /* Page content spacing */
@@ -137,21 +151,24 @@ header::before, .app-header::before {
 /* Small additions */
 
 /* Shadow on logo and doggo */
-.logo, .doggo_sit_a {
+.logo,
+.doggo_sit_a {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
-
 /* Transparancy, blur and shadow on lists */
-._0_k_ui_dropdown_data_list, ._0_more_search_box, .k_ui_dropdown_data_list {
-  background-color: rgba(var(--bg), 0.6);
-  backdrop-filter: blur(10px);
-  /* filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2)); */
+._0_k_ui_dropdown_data_list,
+._0_more_search_box,
+.k_ui_dropdown_data_list,
+.dd-list {
+  background-color: rgba(var(--bg), 0.6) !important;
+  backdrop-filter: blur(10px) !important;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
 .auto_suggestions {
-  background-color: rgba(var(--bg), 0.6);
-  backdrop-filter: blur(5px);
+  background-color: rgba(var(--bg), 0.9) !important;
+  backdrop-filter: blur(10px);
 }
 .auto_suggestions_footer {
   background-color: var(--bg) !important;
@@ -162,7 +179,7 @@ header::before, .app-header::before {
   -webkit-backdrop-filter: blur(10px);
 }
 .advanced-search-modal-backdrop::before {
-  background-color: rgba(255, 255, 255, 0.0) !IMPORTANT;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 .as-footer {
   background-image: repeating-linear-gradient(
@@ -177,7 +194,6 @@ header::before, .app-header::before {
   filter: none !important;
   backdrop-filter: none !important;
 }
-
 
 /* Button */
 /* Coded by Andrew Millen https://codepen.io/andrewmillen/ */
@@ -200,7 +216,7 @@ header::before, .app-header::before {
 }
 
 @mixin pseudo-positioning {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -209,43 +225,52 @@ header::before, .app-header::before {
 
 .btn.--primary {
   color: #000;
-  background: linear-gradient(rgba(0, 65, 184, 0.325), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.325));
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
-              0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
-              inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
-              inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
+  background: linear-gradient(
+    rgba(0, 65, 184, 0.325),
+    rgba(45, 115, 199, 0.625),
+    rgba(33, 160, 196, 0.325)
+  );
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
 }
 
 .btn.--primary:focus,
 .btn.--primary:active {
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
-              0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
-              inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
-              inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
-              0 0 0.5em rgba(52, 106, 227, 0.5);
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
+    0 0 0.5em rgba(52, 106, 227, 0.5);
 }
 
 .btn {
-  background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
-              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
-              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
-              inset 0 0.375em 0.5em 0.25em #BBBBBB;
+  background: linear-gradient(
+    rgba(160, 160, 160, 0.625),
+    rgba(255, 255, 255, 0.625)
+  );
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
+    0 0.125em 0.125em rgba(0, 0, 0, 0.3),
+    inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+    inset 0 0.375em 0.5em 0.25em #bbbbbb;
 }
 
 .btn:focus,
 .btn:active {
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
-              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
-              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
-              inset 0 0.375em 0.5em 0.25em #BBBBBB,
-              0 0 0.5em rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
+    0 0.125em 0.125em rgba(0, 0, 0, 0.3),
+    inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+    inset 0 0.375em 0.5em 0.25em #bbbbbb, 0 0 0.5em rgba(0, 0, 0, 0.25);
 }
 
 // top shine
 .btn:before {
   @include pseudo-positioning;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
   top: 5%;
@@ -256,7 +281,10 @@ header::before, .app-header::before {
 // bottom glow
 .btn:after {
   @include pseudo-positioning;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+  );
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
   bottom: 10%;
@@ -267,7 +295,7 @@ header::before, .app-header::before {
 .btn span {
   position: relative;
   top: -1px;
-  z-index: 1;  
+  z-index: 1;
   letter-spacing: 0.0375em;
   -webkit-text-stroke-width: 0.025em;
   -webkit-text-stroke-color: #000000;
@@ -284,8 +312,7 @@ header::before, .app-header::before {
 /* Hover button */
 .btn.--primary:hover {
   color: rgb(255, 255, 255) !important;
-  box-shadow:
-    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
@@ -293,24 +320,21 @@ header::before, .app-header::before {
   transition: box-shadow 0.2s ease-in-out;
 }
 
-
 /* Ignore these elements */
 button#searchFormSubmit {
   all: unset;
 }
-
 
 /* Toggle switches */
 /* Toggle switch when ON */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar {
   position: relative;
   background: linear-gradient(
-    rgba(0, 65, 184, 0.625), 
-    rgba(45, 115, 199, 0.625), 
+    rgba(0, 65, 184, 0.625),
+    rgba(45, 115, 199, 0.625),
     rgba(33, 160, 196, 0.625)
   );
-  box-shadow:
-    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
@@ -320,7 +344,7 @@ button#searchFormSubmit {
 
 /* Top shine */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 5%;
@@ -328,7 +352,10 @@ button#searchFormSubmit {
   height: 33%;
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.9),
+    rgba(255, 255, 255, 0.3)
+  );
   filter: blur(1px);
   z-index: 2;
   transition: background 0.3s ease, box-shadow 0.3s ease;
@@ -336,7 +363,7 @@ button#searchFormSubmit {
 
 /* Bottom glow */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   bottom: 10%;
@@ -344,7 +371,10 @@ button#searchFormSubmit {
   height: 33%;
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+  );
   filter: blur(3px);
   z-index: 1;
 }
@@ -354,21 +384,17 @@ button#searchFormSubmit {
   border: none !important;
 }
 
-
-
-
 /* Toggle switches */
 /* Toggle switch when ON */
 .k_ui_toggle_switch input:checked ~ ._0_lensToggler {
   position: relative;
-    background: linear-gradient(
-    rgba(0, 65, 184, 0.625), 
-    rgba(45, 115, 199, 0.625), 
+  background: linear-gradient(
+    rgba(0, 65, 184, 0.625),
+    rgba(45, 115, 199, 0.625),
     rgba(33, 160, 196, 0.625)
   ) !important;
-  
-  box-shadow:
-    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75) !important;
@@ -378,7 +404,7 @@ button#searchFormSubmit {
 
 /* Top shine */
 .k_ui_toggle_switch input:checked ~ ._0_lensToggler::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   top: 5%;
@@ -394,23 +420,25 @@ button#searchFormSubmit {
 
 /* Bottom glow */
 .k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar::after {
-
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   border-radius: inherit;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)) !important;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.5)
+  ) !important;
   filter: blur(3px);
   z-index: 1;
 }
-.k_ui_toggle_switch input:checked~.k_ui_toggle_switch_bar,
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar,
 .k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar {
   background: linear-gradient(
-    rgba(0, 65, 184, 0.625), 
-    rgba(45, 115, 199, 0.625), 
+    rgba(0, 65, 184, 0.625),
+    rgba(45, 115, 199, 0.625),
     rgba(33, 160, 196, 0.625)
   ) !important;
 }
@@ -421,8 +449,7 @@ button#searchFormSubmit {
 /* Hover toggle */
 .k_ui_toggle_switch input:checked:hover ~ .k_ui_toggle_switch_bar,
 .k_ui_toggle_switch input:checked:hover ~ ._0_lensToggler {
-  box-shadow:
-    0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
@@ -431,17 +458,10 @@ button#searchFormSubmit {
 }
 .k_ui_toggle_switch input:not(:checked):hover ~ .k_ui_toggle_switch_bar,
 .k_ui_toggle_switch input:not(:checked):hover ~ ._0_lensToggler {
-  box-shadow:
-    0 0.375em 0.5em rgba(0, 0, 0, 0.2),
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0 1em rgba(84, 159, 236, 0.4); /* muted blue glow */
   transition: box-shadow 0.2s ease-in-out;
 }
-
-
-
-
-
-
 
 /* Mobile adjustments */
 @media (max-width: 600px) {
@@ -451,8 +471,9 @@ button#searchFormSubmit {
   .spt {
     display: none;
   }
-  .content-area, .mob {
-   background: var(--bg) !important;
+  .content-area,
+  .mob {
+    background: var(--bg) !important;
   }
   .a-w {
     background-image: repeating-linear-gradient(
@@ -462,7 +483,8 @@ button#searchFormSubmit {
       var(--pinstripe2) 4px
     );
   }
-  ._0_filters-panel, .serp-nav {
+  ._0_filters-panel,
+  .serp-nav {
     background: none !important;
   }
   .m-h {
@@ -486,14 +508,16 @@ button#searchFormSubmit {
     padding-top: 150px !important;
     z-index: 1;
   }
-  .quick-settings, .quick-settings-footer {
+  .quick-settings,
+  .quick-settings-footer {
     background-color: rgba(var(--bg), 0.2) !important;
     backdrop-filter: blur(10px) !important;
   }
   .quick-settings --open {
     z-index: 999 !important;
   }
-  .d, .description,  {
+  .d,
+  .description {
     color: var(--text) !important;
   }
   .app-box-center {
@@ -510,7 +534,10 @@ button#searchFormSubmit {
     min-width: 4em;
   }
 
-  header, .app-header, .top-bar, .spt {
+  header,
+  .app-header,
+  .top-bar,
+  .spt {
     padding: 0.5em;
     backdrop-filter: blur(6px);
     z-index: 99;
@@ -536,7 +563,8 @@ button#searchFormSubmit {
     width: 100%;
     height: auto;
   }
-  .sri-group, .search-result {
+  .sri-group,
+  .search-result {
     border-bottom: 0px !important;
   }
   .s-f-w.--active {
@@ -553,5 +581,182 @@ button#searchFormSubmit {
     display: block;
     text-align: center;
     white-space: pre;
+  }
+}
+
+/* Tooltips */
+.trigger > .tooltip.top {
+  bottom: auto !important;
+  top: 100% !important; /* Move tooltip above trigger, anchored at bottom */
+  right: 0 !important; /* Align left edge with trigger */
+  left: auto !important;
+  transform: none !important;
+  margin-bottom: var(--offset, 10px) !important;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  body {
+    color: var(--text);
+  }
+  .spt {
+    display: none;
+  }
+  .content-area,
+  .mob {
+    background: var(--bg) !important;
+  }
+  .a-w {
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    );
+  }
+  ._0_filters-panel,
+  .serp-nav {
+    background: none !important;
+  }
+  .m-h {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+    padding: 1em;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    );
+    transition: transform 0.3s ease;
+  }
+  .top-nav {
+    padding-top: 150px !important;
+    z-index: 1;
+  }
+  .quick-settings,
+  .quick-settings-footer {
+    background-color: rgba(var(--bg), 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+  }
+  .quick-settings --open {
+    z-index: 999 !important;
+  }
+  .d,
+  .description {
+    color: var(--text) !important;
+  }
+  .app-box-center {
+    padding-top: 8vh; /* adaptive spacing */
+  }
+
+  :root {
+    --btn-scale: 0.5;
+  }
+
+  .btn {
+    font-size: calc(1.5rem * var(--btn-scale));
+    padding: 0 calc(1rem * var(--btn-scale));
+    min-width: 4em;
+  }
+
+  header,
+  .app-header,
+  .top-bar,
+  .spt {
+    padding: 0.5em;
+    backdrop-filter: blur(6px);
+    z-index: 99;
+  }
+
+  .body-content {
+    background-size: 4px 4px;
+  }
+
+  .auto_suggestions {
+    max-width: 100vw;
+    left: 0;
+    right: 0;
+  }
+  .m-app-logo {
+    color: var(--text) !important;
+  }
+  .logo {
+    display: none !important;
+    filter: none !important;
+  }
+  .doggo_sit_a {
+    width: 100%;
+    height: auto;
+  }
+  .sri-group,
+  .search-result {
+    border-bottom: 0px !important;
+  }
+  .s-f-w.--active {
+    background-image: repeating-linear-gradient(
+      var(--pinstripe1) 0%,
+      var(--pinstripe1) 2px,
+      var(--pinstripe2) 2px,
+      var(--pinstripe2) 4px
+    ) !important;
+  }
+  .main-footer::after {
+    content: "© Kagi. Humanize the Web.\A© Visnes. Themenize the Kagi.";
+    font-size: calc(1.2rem * var(--btn-scale));
+    display: block;
+    text-align: center;
+    white-space: pre;
+  }
+
+  /* Mobile landing_cat_buttons styles */
+  .landing_cat_buttons > button {
+    font-family: "myriad-pro", system-ui !important;
+    border-radius: 1000px;
+    position: relative;
+    overflow: visible;
+    gap: 12px !important;
+    cursor: pointer;
+    color: #000;
+    background: linear-gradient(
+      rgba(160, 160, 160, 0.625),
+      rgba(255, 255, 255, 0.625)
+    );
+    box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
+      0 0.125em 0.125em rgba(0, 0, 0, 0.3),
+      inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+      inset 0 0.375em 0.5em 0.25em #bbb;
+    transition: box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+  }
+
+  .landing_cat_buttons > button.--active {
+    color: #000 !important;
+    background: linear-gradient(
+      rgba(0, 65, 184, 0.625),
+      rgba(45, 115, 199, 0.625),
+      rgba(33, 160, 196, 0.625)
+    ) !important;
+    border-color: transparent !important;
+    box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
+      0 0.125em 0.125em rgba(0, 78, 187, 0.5),
+      inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+      inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75) !important;
+  }
+
+  .landing_cat_buttons > button.--active::before,
+  .landing_cat_buttons > button.--active::after {
+    background: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .landing_cat_buttons {
+    padding: 0.5em 20px 0.75em !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
   }
 }
