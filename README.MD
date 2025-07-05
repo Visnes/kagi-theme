@@ -20,26 +20,43 @@ This will change automatically based on your system settings. So if your system 
 - Fixing it so you can actually choose the theme from Kagi, and not use "Default"
 - Clean up things. This is a mess...
 
-# Screenshot
-## Light mode on desktop
+# Screenshots
+<h3>Light mode on desktop</h3>
+<table>
+  <tr>
+    <td><img src="images/light.png" width="300" /></td>
+    <td><img src="images/light-result.png" width="300" /></td>
+    <td><img src="images/light-advanced-search.png" width="300" /></td>
+  </tr>
+</table>
 
-| ![light](images/light.png) | ![light-result](images/light-result.png) | ![light-advanced-search](images/light-advanced-search.png) |
-|----------------------------|-------------------------------------------|-------------------------------------------------------------|
+<h3>Dark mode on desktop</h3>
+<table>
+  <tr>
+    <td><img src="images/dark.png" width="300" /></td>
+    <td><img src="images/dark-result.png" width="300" /></td>
+    <td><img src="images/dark-advanced-search.png" width="300" /></td>
+  </tr>
+</table>
 
+<h3>Light mode on mobile</h3>
+<table>
+  <tr>
+    <td><img src="images/light-mobile.png" width="300" /></td>
+    <td><img src="images/light-mobile-result.png" width="300" /></td>
+    <td><img src="images/light-mobile-advanced-search.png" width="300" /></td>
+  </tr>
+</table>
 
-## Dark mode on desktop
+<h3>Dark mode on mobile</h3>
+<table>
+  <tr>
+    <td><img src="images/dark-mobile.png" width="300" /></td>
+    <td><img src="images/dark-mobile-result.png" width="300" /></td>
+    <td><img src="images/dark-mobile-advanced-search.png" width="300" /></td>
+  </tr>
+</table>
 
-| ![dark](images/dark.png) | ![dark-result](images/dark-result.png) | ![dark-advanced-search](images/dark-advanced-search.png) |
-|--------------------------|-----------------------------------------|-----------------------------------------------------------|
-
-
-## **Light mode on mobile**
-| ![light](images/light-mobile.png) | ![light-result](images/light-mobile-result.png) | ![light-advanced-search](images/light-mobile-advanced-search.png) |
-|----------------------------|-------------------------------------------|-------------------------------------------------------------|
-
-## **Dark mode on mobile**
-| ![dark](images/dark-mobile.png) | ![dark-result](images/dark-mobile-result.png) | ![dark-advanced-search](images/dark-mobile-advanced-search.png) |
-|----------------------------|-------------------------------------------|-------------------------------------------------------------|
 
 # Credits
 - The [button CSS](https://codepen.io/andrewmillen/pen/RwqBMrO) is made by [Andrew Millen](https://codepen.io/andrewmillen/)
