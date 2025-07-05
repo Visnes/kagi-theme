@@ -1,9 +1,9 @@
 :root {
-  --primary: var(--text);
-  --blue: rgb(14, 122, 254);
-  --text: var(--text-light);
   --text-light: rgb(0, 0, 0);
   --text-dark: rgb(255, 255, 255);
+  --text: var(--text-light);
+  --primary: var(--text);
+  --blue: rgb(14, 122, 254);
   --bg-dark: rgb(22, 22, 22);
   --bg-light: rgb(240, 240, 240);
   --bg: 248, 248, 248;
@@ -12,6 +12,12 @@
   --pinstripe1-dark: rgba(34, 34, 34, 0.6);
   --pinstripe2-dark: rgba(44, 44, 44, 0.6);
   --btn-scale: 0.6;
+  --pinstripe-gradient: repeating-linear-gradient(
+    var(--pinstripe1) 0%,
+    var(--pinstripe1) 2px,
+    var(--pinstripe2) 2px,
+    var(--pinstripe2) 4px
+  );
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,12 +60,7 @@ body {
 
 /* Homepage only */
 .body-content {
-  background-image: repeating-linear-gradient(
-    var(--pinstripe1) 0%,
-    var(--pinstripe1) 2px,
-    var(--pinstripe2) 2px,
-    var(--pinstripe2) 4px
-  );
+  background-image: var(--pinstripe-gradient);
 }
 
 /* copyright */
@@ -80,12 +81,7 @@ header,
   padding: 1em;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  background-image: repeating-linear-gradient(
-    var(--pinstripe1) 0%,
-    var(--pinstripe1) 2px,
-    var(--pinstripe2) 2px,
-    var(--pinstripe2) 4px
-  );
+  background-image: var(--pinstripe-gradient);
 }
 
 header::before,
@@ -128,17 +124,16 @@ header::before,
 }
 
 /* Search suggestions */
-.auto_suggestions --visble {
+.suggestions_area {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+.auto_suggestions--visble {
   position: absolute;
   z-index: 10000 !important;
   top: 100%;
   left: 0;
   right: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
@@ -166,12 +161,22 @@ header::before,
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
+/* Scene Right Content Box */
+.scene {
+  background-image: var(--pinstripe-gradient) !important;
+  padding: 15px;
+  border: 1px solid var(--bg);
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* Suggestions */
 .auto_suggestions {
   background-color: rgba(var(--bg), 0.9) !important;
   backdrop-filter: blur(10px);
 }
 .auto_suggestions_footer {
-  background-color: var(--bg) !important;
+  background-image: var(--pinstripe-gradient) !important;
 }
 .advanced-search-modal {
   background-color: rgba(var(--bg), 0.6);
@@ -182,12 +187,7 @@ header::before,
   background-color: rgba(255, 255, 255, 0) !important;
 }
 .as-footer {
-  background-image: repeating-linear-gradient(
-    var(--pinstripe1) 0%,
-    var(--pinstripe1) 2px,
-    var(--pinstripe2) 2px,
-    var(--pinstripe2) 4px
-  ) !important;
+  background-image: var(--pinstripe-gradient) !important;
 }
 .search-form:focus {
   box-shadow: none !important;
@@ -476,12 +476,7 @@ button#searchFormSubmit {
     background: var(--bg) !important;
   }
   .a-w {
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    );
+    background-image: var(--pinstripe-gradient);
   }
   ._0_filters-panel,
   .serp-nav {
@@ -496,12 +491,7 @@ button#searchFormSubmit {
     padding: 1em;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    );
+    background-image: var(--pinstripe-gradient);
     transition: transform 0.3s ease;
   }
   .top-nav {
@@ -568,12 +558,7 @@ button#searchFormSubmit {
     border-bottom: 0px !important;
   }
   .s-f-w.--active {
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    ) !important;
+    background-image: var(--pinstripe-gradient) !important;
   }
   .main-footer::after {
     content: "© Kagi. Humanize the Web.\A© Visnes. Themenize the Kagi.";
@@ -607,12 +592,7 @@ button#searchFormSubmit {
     background: var(--bg) !important;
   }
   .a-w {
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    );
+    background-image: var(--pinstripe-gradient);
   }
   ._0_filters-panel,
   .serp-nav {
@@ -627,12 +607,7 @@ button#searchFormSubmit {
     padding: 1em;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    );
+    background-image: var(--pinstripe-gradient);
     transition: transform 0.3s ease;
   }
   .top-nav {
@@ -699,12 +674,7 @@ button#searchFormSubmit {
     border-bottom: 0px !important;
   }
   .s-f-w.--active {
-    background-image: repeating-linear-gradient(
-      var(--pinstripe1) 0%,
-      var(--pinstripe1) 2px,
-      var(--pinstripe2) 2px,
-      var(--pinstripe2) 4px
-    ) !important;
+    background-image: var(--pinstripe-gradient) !important;
   }
   .main-footer::after {
     content: "© Kagi. Humanize the Web.\A© Visnes. Themenize the Kagi.";
