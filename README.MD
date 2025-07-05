@@ -1,5 +1,5 @@
 # An OS X inspired aqua theme for Kagi!
-A custom theme for [Kagi the search engine](https://kagi.com) that's inspired by old school Apple's OS X Aqua theme.
+A custom theme for the [Kagi the search engine](https://kagi.com) that's inspired by old school Apple's OS X Aqua theme.
 
 ## Auto Light & Dark mode
 This will change automatically based on your system settings. So if your system is set to light, it will show the light version. For this to work, choose **"Default"** theme (see below).
