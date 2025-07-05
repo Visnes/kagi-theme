@@ -68,17 +68,19 @@ body {
   content: "© Visnes. Themenize the Kagi.";
 }
 
-/* Header */
-header,
-.app-header,
-.top-bar,
-.spt {
+/* Header (*/
+.app-header {
+/* Removed these, and nothing seems to have happened OPTIMIZED: header, .app-header, .top-bar, .spt */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 1em;
+  padding: 1em 1em 1em 0;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-image: var(--pinstripe-gradient);
@@ -97,6 +99,11 @@ header::before,
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
+}
+
+.app-logo {
+  padding-inline-start: 1em;
+  top: 10px;
 }
 
 @media (prefers-color-scheme: light) {
