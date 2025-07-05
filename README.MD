@@ -2,7 +2,7 @@
 Tried making something that's inspired by old school OS X Aqua.
 
 ## Auto Light & Dark mode
-This will change automatically based on your system settings. So if your system is set to light, it will show the light version.
+This will change automatically based on your system settings. So if your system is set to light, it will show the light version. For this to work, choose **"Default"** theme (see below).
 
 # Using this theme
 1. Go to [Appearance](https://kagi.com/settings/appearance)
