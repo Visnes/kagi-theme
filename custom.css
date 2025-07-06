@@ -1,7 +1,10 @@
+@import url(https://fonts.googleapis.com/css?family=Inter);
+
 :root {
   --text-light: rgb(0, 0, 0);
   --text-dark: rgb(255, 255, 255);
   --text: var(--text-light);
+  --text-font: 'SF Pro', 'Inter', system-ui, sans-serif;
   --primary: var(--text);
   --blue: rgb(14, 122, 254);
   --bg-dark: rgb(22, 22, 22);
@@ -56,6 +59,7 @@ a.nav-item-link.--active {
 /* Base */
 body {
   background-color: var(--bg);
+  font-family: var(--text-font);
 }
 
 /* Homepage only */
@@ -211,13 +215,13 @@ header::before,
   height: calc(1.5em * var(--btn-scale));
   padding: 0 calc(1.5em * var(--btn-scale));
   grid-row: 1;
-  font-family: "myriad-pro", system-ui;
+  font-family: var(--text-font);
   font-weight: 500;
   min-width: 6em;
   border-radius: 1000px;
   position: relative;
   overflow: hidden;
-  cursor: default;
+  cursor: pointer;
   color: #000;
   outline: none;
 }
@@ -508,7 +512,7 @@ button#searchFormSubmit {
   .quick-settings,
   .quick-settings-footer {
     background-color: rgba(var(--bg), 0.2) !important;
-    backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(5px) !important;
   }
   .quick-settings --open {
     z-index: 999 !important;
@@ -693,7 +697,7 @@ button#searchFormSubmit {
 
   /* Mobile landing_cat_buttons styles */
   .landing_cat_buttons > button {
-    font-family: "myriad-pro", system-ui !important;
+    font-family: var(--text-font) !important;
     border-radius: 1000px;
     position: relative;
     overflow: visible;
