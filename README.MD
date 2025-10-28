@@ -5,7 +5,7 @@ A custom theme for the [Kagi the search engine](https://kagi.com) that's inspire
 This will change automatically based on your system settings. So if your system is set to light, it will show the light version. **For this to work, choose "Default" theme (see below).**
 
 # Using this theme
-<p align="center"><strong>⚠️ If you don't the following, the theme will look trash! ⚠️</strong></p>
+<p align="center"><strong>⚠️ If you don't do the following, the theme will look trash! ⚠️</strong></p>
 
 1. Go to [Appearance](https://kagi.com/settings/appearance)
 2. Change theme to **"Default"** not **"Light"** or **"Dark"**
