@@ -69,6 +69,7 @@ body {
 
 #quickSettings {
   z-index: 10000 !important;
+
 }
 
 /* Homepage only */
@@ -93,7 +94,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 1em 1em 1em 0;
+  padding: 10px 0px 10px 0px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-image: var(--pinstripe-gradient);
