@@ -16,6 +16,7 @@ This will change automatically based on your system settings. So if your system 
 - A border with a drop shadow shows up across the screen if you unfocus the search field in dark mode (only on the landing page)
 - ~~Can't get the mini toggle back next to "all" and "News 360" because I'm screwing around with the toggle switches for the side panel~~
 - ~~A white square shows up next to the X in the search field on a result page, only when it's in focus~~
+- ~~The auto suggest box is way to hard to read, and looks kinda ass.~~
 
 # Working on
 - The bugs above
