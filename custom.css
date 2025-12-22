@@ -67,6 +67,11 @@ body {
   font-family: var(--text-font);
 }
 
+body .overlay-close-event-handler {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
 #quickSettings {
   z-index: 10000 !important;
 
@@ -94,7 +99,7 @@ body {
   left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 10px 0px 10px 0px;
+  padding: 10px 30px 10px 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-image: var(--pinstripe-gradient);
@@ -527,6 +532,7 @@ button#searchFormSubmit {
   .quick-settings --open {
     z-index: 999 !important;
   }
+
   .d,
   .description {
     color: var(--text) !important;
