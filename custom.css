@@ -67,6 +67,10 @@ body {
   font-family: var(--text-font);
 }
 
+#quickSettings {
+  z-index: 10000 !important;
+}
+
 /* Homepage only */
 .body-content {
   background-image: var(--pinstripe-gradient);
