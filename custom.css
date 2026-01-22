@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Inter);
 
+/* Variables */
 :root {
   --text-light: rgb(0, 0, 0);
   --text-dark: rgb(255, 255, 255);
@@ -46,6 +47,17 @@
   }
 }
 
+/* Base Styles */
+body {
+  background-color: var(--bg);
+  font-family: var(--text-font);
+}
+
+body .overlay-close-event-handler {
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
 hr {
   display: none;
 }
@@ -61,35 +73,8 @@ a.nav-item-link.--active {
   color: var(--blue) !important;
 }
 
-/* Base */
-body {
-  background-color: var(--bg);
-  font-family: var(--text-font);
-}
-
-body .overlay-close-event-handler {
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px) !important;
-}
-
-#quickSettings {
-  z-index: 10000 !important;
-
-}
-
-/* Homepage only */
-.body-content {
-  background-image: var(--pinstripe-gradient);
-}
-
-/* copyright */
-.copyright::after {
-  content: "© Visnes. Themenize the Kagi.";
-}
-
-/* Header (*/
+/* Header */
 .app-header {
-/* Removed these, and nothing seems to have happened OPTIMIZED: header, .app-header, .top-bar, .spt */
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -110,11 +95,7 @@ header::before,
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.15),
-    transparent
-  );
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.15), transparent);
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
@@ -132,28 +113,23 @@ header::before,
   }
 
   .app-header::before {
-    background: linear-gradient(
-      to bottom,
-      rgba(255, 255, 255, 0.3),
-      transparent
-    );
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
     opacity: 0.3;
   }
 }
 
 /* Navigation */
-.app-nav {
-  border-bottom: 0;
-}
+.app-nav,
 .landing_cat_buttons {
   border-bottom: 0;
 }
 
-/* Search suggestions */
+/* Search & Suggestions */
 .suggestions_area {
   background: linear-gradient(to bottom, var(--suggestion-bg));
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
+
 .auto_suggestions--visble {
   position: absolute;
   z-index: 10000 !important;
@@ -163,31 +139,47 @@ header::before,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Page content spacing */
+.auto_suggestions {
+  background-color: rgba(var(--bg), 0.9) !important;
+  backdrop-filter: blur(10px);
+}
+
+.auto_suggestions_footer,
+.as-footer {
+  background-image: var(--pinstripe-gradient) !important;
+}
+
+.search-form:focus {
+  box-shadow: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Modals & Overlays */
+#quickSettings {
+  z-index: 10000 !important;
+}
+
+.advanced-search-modal {
+  background-color: rgba(var(--bg), 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.advanced-search-modal-backdrop::before {
+  background-color: rgba(255, 255, 255, 0) !important;
+}
+
+/* Content Areas */
+.body-content {
+  background-image: var(--pinstripe-gradient);
+}
+
 .app-box-center {
   padding-top: 180px;
   z-index: 1;
 }
 
-/* Small additions */
-
-/* Shadow on logo and doggo */
-.logo,
-.doggo_sit_a {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-}
-
-/* Transparancy, blur and shadow on lists */
-._0_k_ui_dropdown_data_list,
-._0_more_search_box,
-.k_ui_dropdown_data_list,
-.dd-list {
-  background-color: rgba(var(--bg), 0.6) !important;
-  backdrop-filter: blur(10px) !important;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
-}
-
-/* Scene Right Content Box */
 .scene {
   background-image: var(--pinstripe-gradient) !important;
   padding: 15px;
@@ -196,35 +188,23 @@ header::before,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Suggestions */
-.auto_suggestions {
+/* Dropdowns & Lists */
+._0_k_ui_dropdown_data_list,
+._0_more_search_box,
+.k_ui_dropdown_data_list,
+.dd-list {
   background-color: rgba(var(--bg), 0.9) !important;
-  backdrop-filter: blur(10px);
-}
-.auto_suggestions_footer {
-  background-image: var(--pinstripe-gradient) !important;
-}
-.advanced-search-modal {
-  background-color: rgba(var(--bg), 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.advanced-search-modal-backdrop::before {
-  background-color: rgba(255, 255, 255, 0) !important;
-}
-.as-footer {
-  background-image: var(--pinstripe-gradient) !important;
-}
-.search-form:focus {
-  box-shadow: none !important;
-  filter: none !important;
-  backdrop-filter: none !important;
+  backdrop-filter: blur(10px) !important;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
-/* Button */
-/* Coded by Andrew Millen https://codepen.io/andrewmillen/ */
-/* Code located at https://codepen.io/andrewmillen/pen/RwqBMrO */
+/* Shadows */
+.logo,
+.doggo_sit_a {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
 
+/* Buttons */
 .btn {
   font-size: calc(1.5rem * var(--btn-scale));
   height: calc(1.5em * var(--btn-scale));
@@ -239,10 +219,7 @@ header::before,
   cursor: pointer;
   color: #000;
   outline: none;
-  background: linear-gradient(
-    rgba(160, 160, 160, 0.625),
-    rgba(255, 255, 255, 0.625)
-  );
+  background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0.125em 0.125em rgba(0, 0, 0, 0.3),
     inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
@@ -251,11 +228,7 @@ header::before,
 
 .btn.--primary {
   color: #000;
-  background: linear-gradient(
-    rgba(0, 65, 184, 0.325),
-    rgba(45, 115, 199, 0.625),
-    rgba(33, 160, 196, 0.325)
-  );
+  background: linear-gradient(rgba(0, 65, 184, 0.325), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.325));
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
@@ -276,10 +249,10 @@ header::before,
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0.125em 0.125em rgba(0, 0, 0, 0.3),
     inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
-    inset 0 0.375em 0.5em 0.25em #bbbbbb, 0 0 0.5em rgba(0, 0, 0, 0.25);
+    inset 0 0.375em 0.5em 0.25em #bbbbbb,
+    0 0 0.5em rgba(0, 0, 0, 0.25);
 }
 
-/* shared pseudo-element base */
 .btn::before,
 .btn::after {
   content: "";
@@ -289,31 +262,21 @@ header::before,
   height: 33%;
 }
 
-/* top shine */
 .btn::before {
   top: 5%;
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.3)
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
   z-index: 2;
 }
 
-/* bottom glow */
 .btn::after {
   bottom: 10%;
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.5)
-  );
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
 }
 
-
-/* text */
 .btn span {
   position: relative;
   top: -1px;
@@ -321,101 +284,33 @@ header::before,
   letter-spacing: 0.0375em;
   -webkit-text-stroke-width: 0.025em;
   -webkit-text-stroke-color: #000000;
+  text-shadow: 0 0.25em 0.2em rgba(0, 0, 0, 0.1);
 }
 
 .btn.--primary span {
   text-shadow: 0 0.25em 0.2em rgba(30, 77, 161, 0.5);
 }
 
-.btn span {
-  text-shadow: 0 0.25em 0.2em rgba(0, 0, 0, 0.1);
-}
-
-/* Hover button */
 .btn.--primary:hover {
   color: rgb(255, 255, 255) !important;
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
-    0 0 1em rgba(84, 159, 236, 0.7); /* blue glow */
+    0 0 1em rgba(84, 159, 236, 0.7);
   transition: box-shadow 0.2s ease-in-out;
 }
 
-/* Ignore these elements */
 button#searchFormSubmit {
   all: unset;
 }
 
-/* Toggle switches */
-/* Toggle switch when ON */
-.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar {
-  position: relative;
-  background: linear-gradient(
-    rgba(0, 65, 184, 0.625),
-    rgba(45, 115, 199, 0.625),
-    rgba(33, 160, 196, 0.625)
-  );
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
-    0 0.125em 0.125em rgba(0, 78, 187, 0.5),
-    inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
-    inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75);
-  border: none;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Top shine */
-.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 5%;
-  transform: translateX(-50%);
-  height: 33%;
-  width: calc(100% - 0.875em);
-  border-radius: 2em 2em 0.5em 0.5em;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.9),
-    rgba(255, 255, 255, 0.3)
-  );
-  filter: blur(1px);
-  z-index: 2;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Bottom glow */
-.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-  transform: translateX(-50%);
-  height: 33%;
-  width: calc(100% - 1.25em);
-  border-radius: 0.75em;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.5)
-  );
-  filter: blur(3px);
-  z-index: 1;
-}
-
-/* Remove default border on ::after */
-.k_ui_toggle_switch_bar::after {
-  border: none !important;
-}
-
-/* Toggle switches */
-/* Toggle switch when ON */
+/* Toggle Switches */
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar,
+.k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar,
 .k_ui_toggle_switch input:checked ~ ._0_lensToggler {
   position: relative;
-  background: linear-gradient(
-    rgba(0, 65, 184, 0.625),
-    rgba(45, 115, 199, 0.625),
-    rgba(33, 160, 196, 0.625)
-  ) !important;
-
+  background: linear-gradient(rgba(0, 65, 184, 0.625), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.625)) !important;
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
@@ -424,7 +319,7 @@ button#searchFormSubmit {
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Top shine */
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::before,
 .k_ui_toggle_switch input:checked ~ ._0_lensToggler::before {
   content: "";
   position: absolute;
@@ -434,76 +329,104 @@ button#searchFormSubmit {
   height: 33%;
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
-  background: #fff !important;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
   filter: blur(1px);
   z-index: 2;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Bottom glow */
+.k_ui_toggle_switch input:checked ~ ._0_lensToggler::before {
+  background: #fff !important;
+}
+
+.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar::after,
 .k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar::after {
   content: "";
   position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(-50%);
+  height: 33%;
+  width: calc(100% - 1.25em);
+  border-radius: 0.75em;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5)) !important;
+  filter: blur(3px);
+  z-index: 1;
+}
+
+.k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar::after {
   top: 0;
   left: 0;
   height: 100%;
   width: 100%;
   border-radius: inherit;
-  background: linear-gradient(
-    rgba(255, 255, 255, 0.2),
-    rgba(255, 255, 255, 0.5)
-  ) !important;
-  filter: blur(3px);
-  z-index: 1;
+  transform: none;
 }
-.k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar,
-.k_ui_toggle_switch.--enabled .k_ui_toggle_switch_bar {
-  background: linear-gradient(
-    rgba(0, 65, 184, 0.625),
-    rgba(45, 115, 199, 0.625),
-    rgba(33, 160, 196, 0.625)
-  ) !important;
-}
-/* Remove default border on ::after */
+
+.k_ui_toggle_switch_bar::after,
 ._0_lensToggler::after {
   border: none !important;
 }
-/* Hover toggle */
+
 .k_ui_toggle_switch input:checked:hover ~ .k_ui_toggle_switch_bar,
 .k_ui_toggle_switch input:checked:hover ~ ._0_lensToggler {
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
-    0 0 1em rgba(84, 159, 236, 0.7); /* blue glow */
-  transition: box-shadow 0.2s ease-in-out;
-}
-.k_ui_toggle_switch input:not(:checked):hover ~ .k_ui_toggle_switch_bar,
-.k_ui_toggle_switch input:not(:checked):hover ~ ._0_lensToggler {
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
-    0 0 1em rgba(84, 159, 236, 0.4); /* muted blue glow */
+    0 0 1em rgba(84, 159, 236, 0.7);
   transition: box-shadow 0.2s ease-in-out;
 }
 
-/* Mobile adjustments */
+.k_ui_toggle_switch input:not(:checked):hover ~ .k_ui_toggle_switch_bar,
+.k_ui_toggle_switch input:not(:checked):hover ~ ._0_lensToggler {
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 0 0 1em rgba(84, 159, 236, 0.4);
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+/* Tooltips */
+.trigger > .tooltip.top {
+  bottom: auto !important;
+  top: 100% !important;
+  right: 0 !important;
+  left: auto !important;
+  transform: none !important;
+  margin-bottom: var(--offset, 10px) !important;
+}
+
+/* Footer */
+.copyright::after {
+  content: "© Visnes. Themenize the Kagi.";
+}
+
+/* Mobile Responsive */
 @media (max-width: 600px) {
+  :root {
+    --btn-scale: 0.5;
+  }
+
   body {
     color: var(--text);
   }
+
   .spt {
     display: none;
   }
+
   .content-area,
   .mob {
     background: var(--bg) !important;
   }
+
   .a-w {
     background-image: var(--pinstripe-gradient);
   }
+
   ._0_filters-panel,
   .serp-nav {
     background: none !important;
   }
+
   .m-h {
     position: fixed;
     top: 0;
@@ -516,15 +439,18 @@ button#searchFormSubmit {
     background-image: var(--pinstripe-gradient);
     transition: transform 0.3s ease;
   }
+
   .top-nav {
     padding-top: 150px !important;
     z-index: 1;
   }
+
   .quick-settings,
   .quick-settings-footer {
     background-color: rgba(var(--bg), 0.2) !important;
     backdrop-filter: blur(5px) !important;
   }
+
   .quick-settings --open {
     z-index: 999 !important;
   }
@@ -533,16 +459,9 @@ button#searchFormSubmit {
   .description {
     color: var(--text) !important;
   }
+
   .app-box-center {
-    padding-top: 8vh; /* adaptive spacing */
-  }
-
-  :root {
-    --btn-scale: 0.5;
-  }
-
-  .btn {
-
+    padding-top: 8vh;
   }
 
   header,
@@ -563,24 +482,30 @@ button#searchFormSubmit {
     left: 0;
     right: 0;
   }
+
   .m-app-logo {
     color: var(--text) !important;
   }
+
   .logo {
     display: none !important;
     filter: none !important;
   }
+
   .doggo_sit_a {
     width: 100%;
     height: auto;
   }
+
   .sri-group,
   .search-result {
     border-bottom: 0px !important;
   }
+
   .s-f-w.--active {
     background-image: var(--pinstripe-gradient) !important;
   }
+
   .main-footer::after {
     content: "© Kagi. Humanize the Web.\A© Visnes. Themenize the Kagi.";
     font-size: calc(1.2rem * var(--btn-scale));
@@ -588,13 +513,10 @@ button#searchFormSubmit {
     text-align: center;
     white-space: pre;
   }
+
   .landing_cat_buttons > button.--active {
     color: #000 !important;
-    background: linear-gradient(
-      rgba(0, 65, 184, 0.625),
-      rgba(45, 115, 199, 0.625),
-      rgba(33, 160, 196, 0.625)
-    ) !important;
+    background: linear-gradient(rgba(0, 65, 184, 0.625), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.625)) !important;
     border-color: transparent !important;
     box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
       0 0.125em 0.125em rgba(0, 78, 187, 0.5),
@@ -614,14 +536,3 @@ button#searchFormSubmit {
     overflow-y: visible !important;
   }
 }
-
-/* Tooltips */
-.trigger > .tooltip.top {
-  bottom: auto !important;
-  top: 100% !important; /* Move tooltip above trigger, anchored at bottom */
-  right: 0 !important; /* Align left edge with trigger */
-  left: auto !important;
-  transform: none !important;
-  margin-bottom: var(--offset, 10px) !important;
-}
-
