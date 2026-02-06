@@ -225,15 +225,14 @@ header::before,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Target the dropdown menu */
+/* Dropdowns & Lists */
 ._0_k_ui_dropdown_data_list,
 ._0_more_search_box,
 .k_ui_dropdown_data_list,
 .dd-list {
-  max-height: 0;              /* Hidden initially */
-  overflow: hidden;           /* Hide content */
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  opacity: 0;                 /* Invisible */
+  background-color: rgba(var(--bg), 0.9) !important;
+  backdrop-filter: blur(10px) !important;
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
 /* Shadows */
