@@ -89,15 +89,14 @@ a.nav-item-link.--active {
 /* Header */
 .app-header {
   display: flex;
-  align-items: center;
   justify-content: flex-start;
   gap: 1em;
-  position: fixed;
+  max-width: unset;
+  position: sticky;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999;
-  padding: 10px 30px 10px 10px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   background-image: var(--pinstripe-gradient);
@@ -112,6 +111,15 @@ header::before,
   opacity: 0.5;
   pointer-events: none;
   z-index: -1;
+}
+
+[content-center] .app-header {
+  padding-inline: calc((100vw - var(--app_content_width)) / 2);
+}
+
+.content-box {
+  max-width: 100% !important;
+  min-width: 100% !important;
 }
 
 .app-logo {
@@ -160,6 +168,10 @@ header::before,
 .auto_suggestions_footer,
 .as-footer {
   background-image: var(--pinstripe-gradient) !important;
+}
+
+#searchFormSubmit {
+  border-radius: 2em !important;
 }
 
 .search-form:focus {
@@ -314,9 +326,6 @@ header::before,
   transition: box-shadow 0.2s ease-in-out;
 }
 
-button#searchFormSubmit {
-  all: unset;
-}
 
 /* Toggle Switches */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar,
