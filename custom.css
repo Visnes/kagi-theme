@@ -9,6 +9,7 @@
  ▀██████▀   ▄████████▀       ████       ███▄        ███    █▀   ▀██████▀▄█ ████████▀    ███    █▀  
                                                                    Theme for Kagi Search by Visnes
                                                               https://github.com/Visnes/kagi-theme
+                                                              https://openkagi.com/themes/os-x-aqua
 */
 
 @import url(https://fonts.googleapis.com/css?family=Inter);
@@ -18,7 +19,7 @@
   --text-light: rgb(0, 0, 0);
   --text-dark: rgb(255, 255, 255);
   --text: var(--text-light);
-  --text-font: 'SF Pro', 'Inter', system-ui, sans-serif;
+  --text-font: 'Lucida Grande', 'SF Pro', 'Inter', system-ui, sans-serif;
   --primary: var(--text);
   --blue: rgb(14, 122, 254);
   --bg-dark: rgb(22, 22, 22);
@@ -244,6 +245,7 @@ header::before,
   cursor: pointer;
   color: #000;
   outline: none;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
   background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0.125em 0.125em rgba(0, 0, 0, 0.3),
@@ -271,11 +273,13 @@ header::before,
 
 .btn:focus,
 .btn:active {
+  transform: translateY(2px);
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0.125em 0.125em rgba(0, 0, 0, 0.3),
     inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
     inset 0 0.375em 0.5em 0.25em #bbbbbb,
     0 0 0.5em rgba(0, 0, 0, 0.25);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
 }
 
 .btn::before,
@@ -316,7 +320,7 @@ header::before,
   text-shadow: 0 0.25em 0.2em rgba(30, 77, 161, 0.5);
 }
 
-.btn.--primary:hover {
+.btn:hover {
   color: rgb(255, 255, 255) !important;
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
@@ -324,6 +328,7 @@ header::before,
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
     0 0 1em rgba(84, 159, 236, 0.7);
   transition: box-shadow 0.2s ease-in-out;
+  transform: translateY(1px);
 }
 
 
