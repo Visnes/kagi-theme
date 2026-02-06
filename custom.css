@@ -51,7 +51,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: var(--bg-rgb-dark);
+    --bg: var(--bg-dark);
     --text: var(--text-dark);
     --pinstripe1: var(--pinstripe1-dark);
     --pinstripe2: var(--pinstripe2-dark);
@@ -61,7 +61,7 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: var(--bg-rgb-light);
+    --bg: var(--bg-light);
     --text: var(--text-light);
     --pinstripe1: var(--pinstripe1-light);
     --pinstripe2: var(--pinstripe2-light);
