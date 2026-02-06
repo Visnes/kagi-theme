@@ -39,11 +39,12 @@
   --suggestion-bg-light: rgba(255, 255, 255, 0.9);
   --suggestion-bg-dark: rgba(34, 34, 34, 0.9);
 
+  /* Button */
   --btn-scale: 0.6;
-  --btn-bg-light: linear-gradient(rgba(160, 160, 160, 0.6), rgba(255, 255, 255, 0.6));
-  --btn-bg-dark: linear-gradient(rgba(40, 40, 40, 0.6), rgba(70, 70, 70, 0.6));
-  --btn-primary-bg-light: linear-gradient(rgba(0, 65, 184, 0.3), rgba(45, 115, 199, 0.6), rgba(33, 160, 196, 0.3));
-  --btn-primary-bg-dark: linear-gradient(rgba(20, 50, 120, 0.3), rgba(30, 80, 150, 0.6), rgba(20, 110, 140, 0.3));
+  --btn-bg-light: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
+  --btn-bg-dark: linear-gradient(rgba(40, 40, 40, 0.625), rgba(70, 70, 70, 0.625));
+  --btn-primary-bg-light: linear-gradient(rgba(0, 65, 184, 0.325), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.325));
+  --btn-primary-bg-dark: linear-gradient(rgba(20, 50, 120, 0.325), rgba(30, 80, 150, 0.625), rgba(20, 110, 140, 0.325));
   --btn-text-light: #000;
   --btn-text-dark: #fff;
   --btn-before-light: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.3));
@@ -269,6 +270,7 @@ header::before,
   grid-row: 1;
   font-family: var(--text-font);
   font-weight: 500;
+  text-shadow: 0 0.25em 0.2em rgba(30, 77, 161, 0.5);
   min-width: 6em;
   border-radius: 1000px;
   position: relative;
@@ -277,11 +279,11 @@ header::before,
   color: var(--btn-text);
   outline: none;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
-  background: var(--btn-bg);
-  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
-    0 0.125em 0.125em rgba(0, 0, 0, 0.3),
-    inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
-    inset 0 0.375em 0.5em 0.25em #bbbbbb;
+  background: linear-gradient(rgba(0, 65, 184, 0.625), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.625));
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3), 
+              0 0.125em 0.125em rgba(0, 78, 187, 0.5), 
+              inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
+              inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75)
 }
 
 .btn.--primary {
@@ -327,7 +329,17 @@ header::before,
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
   background: var(--btn-before);
+  filter: blur(0.5px);
   z-index: 2;
+}
+
+#searchFormSubmit::before {
+  content: "Fetch";
+  line-height: 2em;
+}
+
+#searchFormSubmit svg {
+  display: none;
 }
 
 .btn::after {
@@ -335,6 +347,7 @@ header::before,
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
   background: var(--btn-after);
+  filter: blur(2px);
 }
 
 .btn span {
