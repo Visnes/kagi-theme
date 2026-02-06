@@ -340,7 +340,7 @@ header::before,
     inset 0 0.375em 0.5em 0.25em rgba(0, 78, 187, 0.75),
     0 0 1em rgba(84, 159, 236, 0.7);
   transition: box-shadow 0.2s ease-in-out;
-  transform: translateY(1px);
+  transform: translateY(-2px);
 }
 
 
