@@ -40,6 +40,16 @@
   --suggestion-bg-dark: rgba(34, 34, 34, 0.9);
 
   --btn-scale: 0.6;
+  --btn-bg-light: linear-gradient(rgba(160, 160, 160, 0.6), rgba(255, 255, 255, 0.6));
+  --btn-bg-dark: linear-gradient(rgba(40, 40, 40, 0.6), rgba(70, 70, 70, 0.6));
+  --btn-primary-bg-light: linear-gradient(rgba(0, 65, 184, 0.3), rgba(45, 115, 199, 0.6), rgba(33, 160, 196, 0.3));
+  --btn-primary-bg-dark: linear-gradient(rgba(20, 50, 120, 0.3), rgba(30, 80, 150, 0.6), rgba(20, 110, 140, 0.3));
+  --btn-text-light: #000;
+  --btn-text-dark: #fff;
+  --btn-before-light: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.3));
+  --btn-before-dark: linear-gradient(rgba(100,100,100,0.9), rgba(80,80,80,0.3));
+  --btn-after-light: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.5));
+  --btn-after-dark: linear-gradient(rgba(80,80,80,0.2), rgba(100,100,100,0.5));
 
   --pinstripe-gradient: repeating-linear-gradient(
     var(--pinstripe1) 0%,
@@ -56,6 +66,11 @@
     --pinstripe1: var(--pinstripe1-dark);
     --pinstripe2: var(--pinstripe2-dark);
     --suggestion-bg: var(--suggestion-bg-dark);
+    --btn-bg: var(--btn-bg-dark);
+    --btn-primary-bg: var(--btn-primary-bg-dark);
+    --btn-text: var(--btn-text-dark);
+    --btn-before: var(--btn-before-dark);
+    --btn-after: var(--btn-after-dark);
   }
 }
 
@@ -66,9 +81,13 @@
     --pinstripe1: var(--pinstripe1-light);
     --pinstripe2: var(--pinstripe2-light);
     --suggestion-bg: var(--suggestion-bg-light);
+    --btn-bg: var(--btn-bg-light);
+    --btn-primary-bg: var(--btn-primary-bg-light);
+    --btn-text: var(--btn-text-light);
+    --btn-before: var(--btn-before-light);
+    --btn-after: var(--btn-after-light);
   }
 }
-
 
 /* Base Styles */
 body {
@@ -107,8 +126,8 @@ a.nav-item-link.--active {
   left: 0;
   width: 100%;
   z-index: 9999;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+/*  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); */
   background-image: var(--pinstripe-gradient);
 }
 
@@ -232,6 +251,7 @@ header::before,
 .dd-list {
   background-color: rgba(var(--bg), 0.9) !important;
   backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
@@ -254,10 +274,10 @@ header::before,
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  color: #000;
+  color: var(--btn-text);
   outline: none;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
-  background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
+  background: var(--btn-bg);
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2),
     0 0.125em 0.125em rgba(0, 0, 0, 0.3),
     inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
@@ -266,7 +286,7 @@ header::before,
 
 .btn.--primary {
   color: #000;
-  background: linear-gradient(rgba(0, 65, 184, 0.325), rgba(45, 115, 199, 0.625), rgba(33, 160, 196, 0.325));
+  background: var(--btn-primary-bg);
   box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.3),
     0 0.125em 0.125em rgba(0, 78, 187, 0.5),
     inset 0 0.25em 0.5em rgba(0, 17, 49, 0.8),
@@ -306,7 +326,7 @@ header::before,
   top: 5%;
   width: calc(100% - 0.875em);
   border-radius: 2em 2em 0.5em 0.5em;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  background: var(--btn-before);
   z-index: 2;
 }
 
@@ -314,7 +334,7 @@ header::before,
   bottom: 10%;
   width: calc(100% - 1.25em);
   border-radius: 0.75em;
-  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5));
+  background: var(--btn-after);
 }
 
 .btn span {
