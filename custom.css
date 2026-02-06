@@ -22,17 +22,25 @@
   --text-font: 'Lucida Grande', 'SF Pro', 'Inter', system-ui, sans-serif;
   --primary: var(--text);
   --blue: rgb(14, 122, 254);
-  --bg-dark: rgb(22, 22, 22);
-  --bg-light: rgb(240, 240, 240);
-  --bg: 248, 248, 248;
+
+  /* Backgrounds */
+  --bg-rgb-light: 240, 240, 240;
+  --bg-rgb-dark: 22, 22, 22;
+  --bg-light: rgb(var(--bg-rgb-light));
+  --bg-dark: rgb(var(--bg-rgb-dark));
+  --bg: var(--bg-rgb-light);
+
   --pinstripe1-light: rgba(255, 255, 255, 0.9);
   --pinstripe2-light: rgba(240, 240, 240, 0.9);
   --pinstripe1-dark: rgba(34, 34, 34, 0.9);
   --pinstripe2-dark: rgba(44, 44, 44, 0.9);
+
   --suggestion-bg: var(--suggestion-bg-light);
   --suggestion-bg-light: rgba(255, 255, 255, 0.9);
   --suggestion-bg-dark: rgba(34, 34, 34, 0.9);
+
   --btn-scale: 0.6;
+
   --pinstripe-gradient: repeating-linear-gradient(
     var(--pinstripe1) 0%,
     var(--pinstripe1) 2px,
@@ -43,7 +51,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: var(--bg-dark);
+    --bg: var(--bg-rgb-dark);
     --text: var(--text-dark);
     --pinstripe1: var(--pinstripe1-dark);
     --pinstripe2: var(--pinstripe2-dark);
@@ -53,13 +61,14 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: var(--bg-light);
+    --bg: var(--bg-rgb-light);
     --text: var(--text-light);
     --pinstripe1: var(--pinstripe1-light);
     --pinstripe2: var(--pinstripe2-light);
     --suggestion-bg: var(--suggestion-bg-light);
   }
 }
+
 
 /* Base Styles */
 body {
@@ -216,14 +225,15 @@ header::before,
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* Dropdowns & Lists */
+/* Target the dropdown menu */
 ._0_k_ui_dropdown_data_list,
 ._0_more_search_box,
 .k_ui_dropdown_data_list,
 .dd-list {
-  background-color: rgba(var(--bg), 0.9) !important;
-  backdrop-filter: blur(10px) !important;
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+  max-height: 0;              /* Hidden initially */
+  overflow: hidden;           /* Hide content */
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  opacity: 0;                 /* Invisible */
 }
 
 /* Shadows */
