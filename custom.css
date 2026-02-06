@@ -173,6 +173,8 @@ header::before,
 
 #searchFormSubmit {
   border-radius: 2em !important;
+  color: var(--primary) !important;
+  margin-left: 1em;
 }
 
 .search-form:focus {
