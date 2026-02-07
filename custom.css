@@ -251,8 +251,8 @@ header::before,
 .k_ui_dropdown_data_list,
 .dd-list {
   background-color: rgba(var(--bg), 0.9) !important;
-  backdrop-filter: blur(10px) !important;
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px);
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
 
@@ -333,15 +333,6 @@ header::before,
   z-index: 2;
 }
 
-#searchFormSubmit::before {
-  content: "Fetch";
-  line-height: 2em;
-}
-
-#searchFormSubmit svg {
-  display: none;
-}
-
 .btn::after {
   bottom: 10%;
   width: calc(100% - 1.25em);
@@ -375,6 +366,63 @@ header::before,
   transform: translateY(-2px);
 }
 
+#searchFormSubmit::before {
+  content: "Fetch";
+  line-height: 2.2em;
+}
+
+#searchFormSubmit svg {
+  display: none;
+}
+
+.filter-item {
+  height:
+  border-radius: 1000px;
+  border: 0px;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(rgba(160, 160, 160, 0.625), rgba(255, 255, 255, 0.625));
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
+              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
+              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+              inset 0 0.375em 0.5em 0.25em #BBBBBB;
+}
+
+.filter-item::focus,
+.filter-item::active {
+  border: 0px;
+  box-shadow: 0 0.375em 0.5em rgba(0, 0, 0, 0.2), 
+              0 0.125em 0.125em rgba(0, 0, 0, 0.3),  
+              inset 0 0.25em 0.25em rgba(0, 0, 0, 0.4),
+              inset 0 0.375em 0.5em 0.25em #BBBBBB,
+              0 0 0.5em rgba(0, 0, 0, 0.25);
+}
+
+.filter-item::before {
+  @include pseudo-positioning;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3));
+  width: calc(100% - 0.875em);
+  border-radius: 2em 2em 0.5em 0.5em;
+  border: 0px;
+  top: 5%;
+  filter: blur(1px);
+  z-index: 2;
+}
+
+.filter-item::after {
+  @include pseudo-positioning;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgb(255, 255, 255, 0.5));
+  width: calc(100% - 1.25em);
+  border-radius: 0.75em;
+  border: 0px;
+  bottom: 10%;
+  filter: blur(3px);
+}
+
+._0_lenses.filter-item {
+  all: unset;
+}
 
 /* Toggle Switches */
 .k_ui_toggle_switch input:checked ~ .k_ui_toggle_switch_bar,
