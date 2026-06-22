@@ -17,7 +17,7 @@ A custom theme for the Kagi the search engine that's inspired by old school Appl
 
 A modern and sleek custom theme for Kagi based on liquid glass introduced in Mac OS Tahoe.
 
-- [Github repo](https://github.com/Visnes/kagi-aqua)
+- [Github repo](https://github.com/Visnes/kagi-liquid-glass)
 - [OpenKagi](https://openkagi.com/themes/mac-os-liquid-glass-auto-light-dark)
 
 # Kagi Mac OS 9 Platinum
