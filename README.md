@@ -3,7 +3,7 @@ This is a repo that links to my collection of custom themes for use with the sea
 
 # Kagi Aqua
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/40021558-eaa6-46bc-8ea0-a131d2fe8a02" />
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/40021558-eaa6-46bc-8ea0-a131d2fe8a02" />
 
 
 A custom theme for the Kagi the search engine that's inspired by old school Apple's OS X Aqua theme.
@@ -13,7 +13,7 @@ A custom theme for the Kagi the search engine that's inspired by old school Appl
 
 # Kagi Liquid Glass
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/1fbe3ce1-db1a-4da5-ac5e-0bda0db5f0c7" />
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/1fbe3ce1-db1a-4da5-ac5e-0bda0db5f0c7" />
 
 A modern and sleek custom theme for Kagi based on liquid glass introduced in Mac OS Tahoe.
 
@@ -22,7 +22,7 @@ A modern and sleek custom theme for Kagi based on liquid glass introduced in Mac
 
 # Kagi Mac OS 9 Platinum
 
-<img width="500" alt="image" src="https://github.com/user-attachments/assets/22d60817-80c5-437b-9a1b-be00280bb6c2" />
+<img width="700" alt="image" src="https://github.com/user-attachments/assets/22d60817-80c5-437b-9a1b-be00280bb6c2" />
 
 A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and feel of Mac OS 9 Platinum released in 1999.
 
