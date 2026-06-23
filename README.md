@@ -38,8 +38,13 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and feel of Microsoft Windows 95 released in *gasp* 1995.
 
 - [Github repo](https://github.com/Visnes/kagi-windows95)
-- [OpenKagi](#)
+- [OpenKagi]([#](https://openkagi.com/themes/windows-95)
 
 # Kagi Dracula / Alucard
 
-A theme based on the rules set by [Dracula Theme](https://draculatheme.com). 
+<img width="1920" height="1080" alt="dracula" src="https://github.com/user-attachments/assets/1153a504-f3df-44f2-99c1-e24722094e2a" />
+
+A theme based on the rules set by [Dracula Theme](https://draculatheme.com). Has a dark and light version Dracula (dark) and Alucard (light) that changes automatically based on system settings.
+
+- [Github repo](https://github.com/Visnes/kagi-dracula)
+- [OpenKagi]([#](https://openkagi.com/themes/dracula)
