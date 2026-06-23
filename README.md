@@ -1,5 +1,8 @@
-# Custom Theme for Kagi the search engine
-This is a repo that links to my collection of custom themes for use with the search engine Kagi.
+# Custom Themes for Kagi the search engine
+This is a repo that links to my collection of custom themes for use with the best search engine Kagi.
+
+## What is Kagi
+Kagi Search is a paid, ad-free, and privacy-centric search engine developed by Kagi Inc., a company based in Palo Alto, California. Its primary mission is to provide high-quality results by prioritizing the user over advertisers and growth metrics.
 
 # Kagi Aqua
 
