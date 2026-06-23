@@ -1,5 +1,5 @@
-# Custom Themes for Kagi the search engine
-This is a repo that links to my collection of custom themes for use with the best search engine Kagi.
+# Custom Kagi Themes
+A collection of custom themes for the Kagi search engine created by me. Ranging from the nostalgia inducing classic Mac OS 9 Platinum to the modern and sleek Liquid Glass from Mac OS Tahoe with everything in between. 
 
 ## Themes
 
