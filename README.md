@@ -6,8 +6,7 @@ Kagi Search is a paid, ad-free, and privacy-centric search engine developed by K
 
 # Kagi Aqua
 
-<img width="1920" alt="image" src="https://github.com/user-attachments/assets/40021558-eaa6-46bc-8ea0-a131d2fe8a02" />
-
+<img width="1920" height="1080" alt="aqua" src="https://github.com/user-attachments/assets/5f20e424-31e2-464c-b9e2-c27ca81ae15a" />
 
 A custom theme for the Kagi the search engine that's inspired by old school Apple's OS X Aqua theme.
 
