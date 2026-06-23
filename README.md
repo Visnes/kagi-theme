@@ -3,16 +3,16 @@ This is a repo that links to my collection of custom themes for use with the bes
 
 ## Themes
 
-- [Mac OS Aqua](#aqua)
-- [Mac OS Tahoe Liquid Glass](#liquidglass)
-- [Mac OS 9 Platinum](#platinum)
-- [Windows 95](#windows95)
-- [Dracula / Alucard](#dracula)
+- [Mac OS Aqua](#kagi-aqua)
+- [Mac OS Tahoe Liquid Glass](#kagi-liquid-glass)
+- [Mac OS 9 Platinum](#kagi-mac-os-9-platinum)
+- [Windows 95](#kagi-windows-95)
+- [Dracula / Alucard](#kagi-dracula-/-alucard)
 
 ## What is Kagi
 Kagi Search is a paid, ad-free, and privacy-centric search engine developed by Kagi Inc., a company based in Palo Alto, California. Its primary mission is to provide high-quality results by prioritizing the user over advertisers and growth metrics.
 
-# [Kagi Aqua](#aqua)
+# Kagi Aqua
 
 <img width="1920" height="1080" alt="aqua" src="https://github.com/user-attachments/assets/5f20e424-31e2-464c-b9e2-c27ca81ae15a" />
 
@@ -21,7 +21,7 @@ A custom theme for the Kagi the search engine that's inspired by old school Appl
 - [Github repo](https://github.com/Visnes/kagi-aqua)
 - [OpenKagi](https://openkagi.com/themes/os-x-aqua)
 
-# [Kagi Liquid Glass](#liquidglass)
+# Kagi Liquid Glass
 
 <img width="1920" alt="image" src="https://github.com/user-attachments/assets/1fbe3ce1-db1a-4da5-ac5e-0bda0db5f0c7" />
 
@@ -30,7 +30,7 @@ A modern and sleek custom theme for Kagi based on liquid glass introduced in Mac
 - [Github repo](https://github.com/Visnes/kagi-liquid-glass)
 - [OpenKagi](https://openkagi.com/themes/mac-os-liquid-glass-auto-light-dark)
 
-# [Kagi Mac OS 9 Platinum](#platinum)
+# Kagi Mac OS 9 Platinum
 
 <img width="1920" height="1080" alt="Platinumdarklight" src="https://github.com/user-attachments/assets/39ed1f4d-0676-42b2-bc00-4b7a58abb250" />
 
@@ -39,7 +39,7 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 - [Github repo](https://github.com/Visnes/kagi-platinum)
 - [OpenKagi](https://openkagi.com/themes/mac-os-9-platinum)
 
-# [Kagi Windows 95](#windows95)
+# Kagi Windows 95
 
 <img width="1920" height="1080" alt="Windows 95" src="https://github.com/user-attachments/assets/467a7a98-6e1f-4da5-80f6-d72aa150fcdd" />
 
@@ -48,7 +48,7 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 - [Github repo](https://github.com/Visnes/kagi-windows95)
 - [OpenKagi](https://openkagi.com/themes/windows-95)
 
-# [Kagi 🧛Dracula / Alucard](#dracula)
+# Kagi Dracula / Alucard
 
 <img width="1920" height="1080" alt="homepage-light-dark" src="https://github.com/user-attachments/assets/85381ae8-1e1e-460e-a571-ec9956d7373d" />
 
