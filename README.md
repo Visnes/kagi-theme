@@ -48,3 +48,4 @@ A modern and sleek custom theme for Kagi that follows the styling rules of the v
 
 - [Github repo](https://github.com/Visnes/kagi-dracula)
 - [OpenKagi](https://openkagi.com/themes/dracula)
+- [Dracula Theme](https://draculatheme.com/kagi)
