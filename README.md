@@ -1,7 +1,7 @@
 # Custom Themes for Kagi the search engine
 This is a repo that links to my collection of custom themes for use with the best search engine Kagi.
 
-## Contents
+## Themes
 
 - [Mac OS Aqua](#aqua)
 - [Mac OS Tahoe Liquid Glass](#liquidglass)
