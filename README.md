@@ -42,7 +42,7 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 
 # Kagi 🧛Dracula / Alucard
 
-<img width="1920" height="1080" alt="dracula" src="https://github.com/user-attachments/assets/1153a504-f3df-44f2-99c1-e24722094e2a" />
+<img width="1920" height="1080" alt="homepage-light-dark" src="https://github.com/user-attachments/assets/85381ae8-1e1e-460e-a571-ec9956d7373d" />
 
 A modern and sleek custom theme for Kagi that follows the styling rules of the very popular [Dracula theme](https://draculatheme.com). It has Dracula (dark) and Alucard (light) modes that changes automatically based on system settings.
 
