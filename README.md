@@ -44,7 +44,7 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 
 <img width="1920" height="1080" alt="dracula" src="https://github.com/user-attachments/assets/1153a504-f3df-44f2-99c1-e24722094e2a" />
 
-A theme based on the rules set by [Dracula Theme](https://draculatheme.com). Has a dark and light version Dracula (dark) and Alucard (light) that changes automatically based on system settings.
+A modern and sleek custom theme for Kagi that follows the styling rules of the very popular [Dracula theme](https://draculatheme.com). It has Dracula (dark) and Alucard (light) modes that changes automatically based on system settings.
 
 - [Github repo](https://github.com/Visnes/kagi-dracula)
 - [OpenKagi](https://openkagi.com/themes/dracula)
