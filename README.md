@@ -39,3 +39,7 @@ A retro and nostalgia-inducing custom theme for Kagi that mimicks the look and f
 
 - [Github repo](https://github.com/Visnes/kagi-windows95)
 - [OpenKagi](#)
+
+# Kagi Dracula / Alucard
+
+A theme based on the rules set by [Dracula Theme](https://draculatheme.com). 
